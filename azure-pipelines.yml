@@ -7,7 +7,7 @@ pool:
 steps:
 - task: UseNode@1
   inputs:
-    versionSpec: '14'
+    versionSpec: '14.17.6'
     addToPath: true
 
 - script: |
