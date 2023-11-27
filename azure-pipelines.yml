@@ -21,7 +21,9 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'For-Docker' # Use the service connection name
-    repository: 'priya1414/mynodeapp-image' # Update to your Docker Hub repository
+    repository: 'priyamynodeapp' # Update to your Docker Hub repository
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: '$(Build.BuildId)'
+    arguments: '--platform windows/amd64' # Add this line
+
