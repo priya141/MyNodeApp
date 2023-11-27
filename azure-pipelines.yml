@@ -7,8 +7,10 @@ pool:
 steps:
 - task: UseNode@1
   inputs:
-    versionSpec: '14.17.6'
+    versionSpec: '14.x'
     addToPath: true
+    installationPath: $(Agent.ToolsDirectory)/Node/14.x
+
 
 - script: |
     npm install
