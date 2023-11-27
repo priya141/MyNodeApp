@@ -18,7 +18,7 @@ steps:
 
 - task: Docker@2
   inputs:
-    containerRegistry: 'For-Docker' # replace with your Azure Container Registry name
+    containerRegistry: 'For-Docker' # Use the service connection name
     repository: 'MyNodeAppImage'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
