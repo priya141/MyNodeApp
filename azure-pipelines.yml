@@ -24,3 +24,10 @@ steps:
     Dockerfile: '**/Dockerfile'
     tags: |
       latest # You can use a specific tag if needed, e.g., $(Build.BuildId)
+      # Add these steps to your existing pipeline YAML
+
+- script: |
+    docker pull priya1414/mynodeapp-image:latest
+    docker run -d -p 3000:3000 priya1414/mynodeapp-image:latest
+  displayName: 'Deploy Docker Image'
+
