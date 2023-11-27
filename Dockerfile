@@ -1,9 +1,8 @@
-# Use an official Node.js runtime as a base image
-FROM node:14.17.6
-
+# Use an official Windows Server Core image as a base image
+FROM mcr.microsoft.com/windows/servercore:ltsc2019
 
 # Set the working directory in the container
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
