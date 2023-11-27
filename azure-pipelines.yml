@@ -18,8 +18,8 @@ steps:
 
 - task: Docker@2
   inputs:
-    containerRegistry: 'youracr' # replace with your Azure Container Registry name
-    repository: 'your-image-name'
+    containerRegistry: 'smarttechcr24' # replace with your Azure Container Registry name
+    repository: 'MyNodeAppImage'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: |
